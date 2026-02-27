@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Teacher Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Teacher Portal</h1>
+    <button onclick="logout()">Logout</button>
+
+    <h2>Add Announcement</h2>
+    <input id="message" placeholder="Enter announcement" />
+    <button onclick="addAnnouncement()">Submit</button>
+
+    <h2>Your Department Announcements</h2>
+    <div id="teacherAnnouncements"></div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      loadTeacherData()
+    </script>
+  </body>
+</html>
