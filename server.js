@@ -3,11 +3,15 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
+const authRoutes = require('./routes/authRoutes')
+const adminRoutes = require('./routes/adminRoutes')
+const teacherRoutes = require('./routes/teacherRoutes')
+
 const app = express()
 
 app.use('/api', authRoutes)
-app.use(express.json())
-app.use(cors())
+app.use('/api/admin', adminRoutes)
+app.use('/api/teacher', teacherRoutes)
 
 // 🔥 THIS IS IMPORTANT
 app.use(express.static('public'))
