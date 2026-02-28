@@ -24,6 +24,6 @@ app.use('/api/teacher', teacherRoutes)
 
 const PORT = process.env.PORT || 3000
 app.get('/', (req, res) => {
-  res.send('Welcome to School ERP 🚀')
+  res.sendFile(__dirname + '/public/login.html')
 })
 app.listen(PORT, () => console.log('Server running on port', PORT))
